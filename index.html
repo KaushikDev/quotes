@@ -91,6 +91,7 @@ margin-right:auto;
 <!--<button  id="getQuote" class="btn btn-default"><i class="fa  fa-heart"></i>My Quotes</button> -->
 <a id="setTweet" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-twitter"></i></a>
 <a id="setPost" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-facebook"></i></a>	
+	
 
 </div>
 </div>
@@ -203,7 +204,7 @@ function tweetIt () {
 var currentAuthor=document.getElementById("authored").innerText;
 var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor);
 //window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor));
-	window.open(tweetUrl);
+	window.open(tweetUrl, _blank);
 	}
 	
 function postIt () {
@@ -211,7 +212,8 @@ function postIt () {
 var currentAuthor=document.getElementById("authored").innerText;
 var postUrl = "https://www.facebook.com/sharer/sharer.php?u="+"\""+ currentQuote +"\""+"-" + currentAuthor;
 //window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor));
-	window.open(postUrl);
+	window.open(postUrl, _blank);
+
 	}
 	
 		  
