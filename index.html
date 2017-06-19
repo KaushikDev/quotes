@@ -208,13 +208,17 @@ var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecod
 	}
 	
 function postIt () {
- var currentQuote=document.getElementById("quotation").innerText;
-var currentAuthor=document.getElementById("authored").innerText;
-var postUrl = "https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes";
-window.open(postUrl, "_blank");
+// var currentQuote=document.getElementById("quotation").innerText;
+//var currentAuthor=document.getElementById("authored").innerText;
+//var postUrl = "https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes";
+//window.open(postUrl, "_blank");
 //document.getElementbyId("setPost").setAttribute("href", postUrl);
 //document.getElementbyId("setPost").click();
-	
+	FB.ui({
+  method: 'feed',
+  link: 'https://developers.facebook.com/docs/',
+  caption: 'An example caption',
+}, function(response){});
 	}
 	
 		  
