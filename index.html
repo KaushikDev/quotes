@@ -87,9 +87,11 @@ margin-right:auto;
 
 <div class = "row rowmargin centered">
 <div class="col-xs-12 text-center">
-<button  id="getQuote" class="btn btn-default"><i class="fa  fa-heart"></i>My Quotes</button>
-<a id="setTweet" target="_blank" class="btn btn-default"><i class="fa fa-twitter"></i>tweet</a>
-<button id="getRealQuote" class="btn btn-default"><i class="fa fa-lightbulb-o"></i>Quotes</button>
+<button id="getRealQuote" class="btn btn-default"><i class="fa fa-lightbulb-o"></i>Next Quote</button>
+<!--<button  id="getQuote" class="btn btn-default"><i class="fa  fa-heart"></i>My Quotes</button> -->
+<a id="setTweet" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-twitter"></i></a>
+<a id="setPost" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-facebook"></i></a>	
+
 </div>
 </div>
 
@@ -98,11 +100,11 @@ margin-right:auto;
 <p style="font-weight:bold;color:red"><i class="fa fa-copyright" aria-hidden="true"></i>KaushikCodeArts : App by Piyush Kaushik</p>
 </div>
 </div>
-  <div class="row text-center">
-                <div class="col-xs-12">
-				<a id="fb" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:blue;font-size:30px;font-weight:bold;"></i></a>
-                <a id="whatsapp" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="whatsapp://send?text=https://KaushikDev.github.io/randomQuotes"><i class="fa fa-whatsapp" aria-hidden="true" style="color:Green;font-size:30px;font-weight:bold;"></i></a>
-        		<a id="tweet" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://twitter.com/home?status=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:skyblue;font-size:30px;font-weight:bold;"></i></a>
+  <div class="row text-center"
+       <div class="col-xs-12">
+	 <a id="fb" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:blue;font-size:30px;font-weight:bold;"></i></a>
+         <a id="whatsapp" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="whatsapp://send?text=https://KaushikDev.github.io/randomQuotes"><i class="fa fa-whatsapp" aria-hidden="true" style="color:Green;font-size:30px;font-weight:bold;"></i></a>
+         <a id="tweet" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://twitter.com/home?status=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:skyblue;font-size:30px;font-weight:bold;"></i></a>
                 </div>
         </div>
 </div>
@@ -129,7 +131,10 @@ $("#setTweet").on("click", function() {
    
    });
  
- 
+ $("#setPost").on("click", function() {
+   postIt();
+   
+   });
  
  $("#getQuote").on("click", function(){
 myQuotes();
@@ -199,6 +204,14 @@ var currentAuthor=document.getElementById("authored").innerText;
 var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor);
 //window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor));
 	window.open(tweetUrl);
+	}
+	
+function postIt () {
+ var currentQuote=document.getElementById("quotation").innerText;
+var currentAuthor=document.getElementById("authored").innerText;
+var postUrl = 'https://www.facebook.com/sharer/sharer.php?u="+(' " ' + currentQuote + ' " ' + currentAuthor);
+//window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor));
+	window.open(postUrl);
 	}
 	
 		  
