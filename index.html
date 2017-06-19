@@ -78,8 +78,8 @@ margin-right:auto;
 
 <div class = "message text-center">
     
-     <span id="quotation" class="quote" style="font-weight:bold;text-shadow:1px 1px black;">The Quote</span>    
-	 <span id="authored" class="author" style="font-family:Lobster;font-size:20px;color:orange;text-shadow:1px 1px black;">Author</span>
+     <span id="quotation" class="quote" style="font-weight:bold;text-shadow:1px 1px black;">From humble beginnings come great things.</span>    
+	 <span id="authored" class="author" style="font-family:Lobster;font-size:20px;color:orange;text-shadow:1px 1px black;">Anonymous</span>
 	</div>
 
 </div>
@@ -106,7 +106,7 @@ margin-right:auto;
 	 <a id="fb" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:blue;font-size:30px;font-weight:bold;"></i></a>
          <a id="whatsapp" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="whatsapp://send?text=https://KaushikDev.github.io/randomQuotes"><i class="fa fa-whatsapp" aria-hidden="true" style="color:Green;font-size:30px;font-weight:bold;"></i></a>
          <a id="tweet" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://twitter.com/home?status=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:skyblue;font-size:30px;font-weight:bold;"></i></a>
-                </div>
+               </div>
         </div>
 </div>
 
@@ -207,21 +207,14 @@ var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecod
 	window.open(tweetUrl, "_blank");
 	}
 	
-function postIt () {
-// var currentQuote=document.getElementById("quotation").innerText;
-//var currentAuthor=document.getElementById("authored").innerText;
-//var postUrl = "https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes";
-//window.open(postUrl, "_blank");
-//document.getElementbyId("setPost").setAttribute("href", postUrl);
-//document.getElementbyId("setPost").click();
-	FB.ui({
-  method: 'feed',
-  link: 'https://developers.facebook.com/docs/',
-  caption: 'An example caption',
-}, function(response){});
-	}
 	
-		  
+	function postIt () {
+ var currentQuote=document.getElementById("quotation").innerText;
+var currentAuthor=document.getElementById("authored").innerText;
+var tweetUrl = "https://www.facebook.com/sharer/sharer.php?u=";
+//window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor));
+	window.open(tweetUrl, "_blank");
+	}	  
 		  
 		  
 		  
