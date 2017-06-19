@@ -90,7 +90,7 @@ margin-right:auto;
 <button id="getRealQuote" class="btn btn-default"><i class="fa fa-lightbulb-o"></i>Next Quote</button>
 <!--<button  id="getQuote" class="btn btn-default"><i class="fa  fa-heart"></i>My Quotes</button> -->
 <a id="setTweet" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-twitter"></i></a>
-<a id="setPost" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-facebook"></i></a>	
+<!-- <a id="setPost" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-facebook"></i></a>	-->
 	
 
 </div>
@@ -136,12 +136,12 @@ $("#setTweet").on("click", function() {
    tweetIt();
    
    });
- 
+ /*
  $("#setPost").on("click", function() {
    postIt();
    
    });
- 
+ */
  $("#getQuote").on("click", function(){
 myQuotes();
 });
@@ -150,7 +150,7 @@ myQuotes();
 
   
    
-
+/*
 function myQuotes(){
 	var quotes=[["It's either my way or no way", "Kaushik"],
 	    ["I am the Power", "He-Man"],
@@ -166,12 +166,13 @@ function myQuotes(){
 	    ["With great power comes great resposibility", "Uncle Ben"],
 	    ["Why do we fall, Bruce?", "Mr. Wayne"],
 	    ["Omlette Du Fromage", "Dexter"]];
+	
 var randQuote = Math.floor(Math.random()*quotes.length);
 $(".quote").html(quotes[randQuote][0]);
 $(".author").html(quotes[randQuote][1]);
 }
 
-
+*/
    
 function realQuotes(){
 	var realquotes=[["Don't cry because it's over, smile because it happened.", "Dr. Seuss"],
