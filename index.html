@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" >
 <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css">
 </head>
-<body style="background-color:black;" onload="realQuotes()">
+<body style="background-color:black;">
 
 <style>
 .rowmargin{
@@ -78,8 +78,8 @@ margin-right:auto;
 
 <div class = "message text-center">
     
-     <span id="quotation" class="quote" style="font-weight:bold;text-shadow:1px 1px black;"></span>    
-	 <span id="authored" class="author" style="font-family:Lobster;font-size:20px;color:orange;text-shadow:1px 1px black;"></span>
+     <span id="quotation" class="quote" style="font-weight:bold;text-shadow:1px 1px black;">From humble beginnings come great things.</span>    
+	 <span id="authored" class="author" style="font-family:Lobster;font-size:20px;color:orange;text-shadow:1px 1px black;">Anonymous</span>
 	</div>
 
 </div>
@@ -200,8 +200,7 @@ function realQuotes(){
  ["Logic will get you from A to Z; imagination will get you everywhere.","Albert Einstein"],
  ["Folks are usually about as happy as they make their minds up to be.","Abraham Lincoln"],
  ["The difference between genius and stupidity is: genius has its limits.","Alexandre Dumas-fils"],
- ["Anyone who has never made a mistake has never tried anything new.","Albert Einstein"],
-["From humble beginnings come great things.","Anonymous"]];	
+ ["Anyone who has never made a mistake has never tried anything new.","Albert Einstein"]];	
 var randRealQuote = Math.floor(Math.random()*realquotes.length);
 $(".quote").html(realquotes[randRealQuote][0]);
 $(".author").html(realquotes[randRealQuote][1]);
