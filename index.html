@@ -209,7 +209,7 @@ var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecod
 function postIt () {
  var currentQuote=document.getElementById("quotation").innerText;
 var currentAuthor=document.getElementById("authored").innerText;
-var postUrl = 'https://www.facebook.com/sharer/sharer.php?u="+"'"+ currentQuote +"'"+"--" + currentAuthor);
+var postUrl = "https://www.facebook.com/sharer/sharer.php?u="+"\""+ currentQuote +"\""+"--" + currentAuthor);
 //window.open('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor));
 	window.open(postUrl);
 	}
