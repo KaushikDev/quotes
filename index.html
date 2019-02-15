@@ -10,7 +10,7 @@
     <script src="jquery-3.2.1.min.js"></script>
     <script src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color:black;">
+<body>
 
 <style>
 .rowmargin{
@@ -39,75 +39,98 @@ font-size: 45px;
 }
 
 
-.message{
-border-style:solid;
-text-align:center;
+
+.shareButton{
+border-color:transparent;background-color:transparent;font-size:25px;color:black;
+} 
+
+#aboutHeading{
+font-family:Lobster;color:Silver;text-shadow:1px 1px black;
+}
+
+.quote{
+font-weight:bold;text-shadow:1px 1px black;
+}
+
+.author{
+font-family:Lobster;color:orange;text-shadow:1px 1px black;
+}
+.card{
+ background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2);
+  transition: 0.3s;
+  width: 80%;
+   border-radius: 5px;
+   margin: 10 auto;
+   float: none;
+   margin-bottom: 1px;
+  text-align:center;
 font-weight:bold;
 color:Red;
 font-family:Shadows Into Light;
 font-size: 30px;
-border-radius:5px;
-padding:20px;
-border-color:white;
-border-width:3px;
-width:90%;
-margin-left:auto;
-margin-right:auto;
-
-
 }
 
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0,0.5);
+}
+
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 1px;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  
+}	
 </style>
 
 <div class = "container-fluid">
+<!-------------About Section-------------------->		
+				<div class="row text-center">
+			<div class="col-xs-12">
+			<div class="card">
+              <button class="btn"><p name="aboutHeading" id="aboutHeading">Your Quote Of The Day Is !!</p></button>
+				<div style="margin: 25px 0;">
+                   <span id="quotation" class="quote" >From humble beginnings come great things.</span>    
+	 <span id="authored" class="author" >Anonymous</span>
+					</div>
+					<button id="getRealQuote" class="btn btn-info" ><i class='fa fa-lightbulb-o'></i> Get Next Quote</button>
+					<button id="setTweet" target="_blank" class="btn btn-primary" ><i class='fa fa-twitter'></i> Tweet This Quote</button>
+				</div>
+			</div>
+		</div>
+<!-------------About Section Ends-------------------->	
 
-<div class = "row rowmargin">
-<div class="col-xs-12">
-<h1 class="headline">Quote Generator</h1>
-</div>
-</div>
-
-
-<div class = "row rowmargin">
-<div class="col-xs-12">
-<h2 class="text-center " style ="font-family:Lobster;color:Silver;text-shadow:1px 1px black;" >Your Quote Of The Day Is !!</h1>
-</div>
-</div>
-
-
-<div class = "row rowmargin centered">
-
-<div class = "message text-center">
-    
-     <span id="quotation" class="quote" style="font-weight:bold;text-shadow:1px 1px black;">From humble beginnings come great things.</span>    
-	 <span id="authored" class="author" style="font-family:Lobster;font-size:20px;color:orange;text-shadow:1px 1px black;">Anonymous</span>
-	</div>
-
-</div>
-
-
-<div class = "row rowmargin centered">
-<div class="col-xs-12 text-center">
-<button id="getRealQuote" class="btn btn-sm" ><i class='fa fa-lightbulb-o'></i> Next Quote</button>
-<!--<button  id="getQuote" class="btn btn-default"><i class="fa  fa-heart"></i>My Quotes</button> -->
-<button id="setTweet" target="_blank" class="btn btn-sm" ><i class='fa fa-twitter'></i> Tweet</button>
-<!-- <a id="setPost" target="_blank" class="btn btn-default"><i class="fa fa-share-alt-square" aria-hidden="true"></i><i class="fa fa-facebook"></i></a>	-->
-	
-
-</div>
-</div>
 
 
   <div class="row text-center"
-       <div class="col-xs-12">
-	 <a id="fb" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:white;font-size:30px;font-weight:bold;"></i></a>
-         <a id="whatsapp" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="whatsapp://send?text=https://KaushikDev.github.io/randomQuotes"><i class="fa fa-whatsapp" aria-hidden="true" style="color:white;font-size:30px;font-weight:bold;"></i></a>
-         <a id="tweet" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://twitter.com/home?status=https://KaushikDev.github.io/randomQuotes" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:white;font-size:30px;font-weight:bold;"></i></a>
-               </div>
+      		<div style="margin: 20px 0;">
+							<a id="fb" class="btn btn-default shareButton" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
+						<i class="fa fa-facebook"></i>
+					</a>
+					<a id="wa" class="btn btn-default shareButton" href="whatsapp://send?text=https://KaushikDev.github.io/randomQuotes" onClick="soundHitSocialIcon.play()">
+						<i class="fa fa-whatsapp"></i>
+					</a>
+					<a id="tw" class="btn btn-default shareButton" href="https://twitter.com/home?status=https://KaushikDev.github.io/randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
+						<i class="fa fa-twitter" ></i>
+					</a>
+					<a id="li" class="btn btn-default shareButton" href="
+		https://www.linkedin.com/shareArticle?url=https://KaushikDev.github.io/randomQuotes&title=randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
+						<i class="fa fa-linkedin" ></i>
+					</a>
+					<a id="ma" class="btn btn-default shareButton" href="mailto:?subject=randomQuotes.&amp;body=https://KaushikDev.github.io/randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
+						<i class="fa fa-envelope-o" ></i>
+					</a>
+				</div>
         </div>
 	<div class="row text-center" style="margin-top:10px;">
 <div class="col-xs-12">
-<a href="https://kaushikdev.github.io/portfolio/" target="_blank" style="color:white;"><i class="fa fa-copyright" aria-hidden="true" style="color:white;font-size:15px;"></i>KaushikCodeArts 2018</a>
+<a href="https://kaushikdev.github.io/portfolio/" target="_blank"><i class="fa fa-copyright" aria-hidden="true"></i>KaushikCodeArts 2018</a>
 </div>
 </div>
 	
