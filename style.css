@@ -1,0 +1,224 @@
+:root{
+    --header-background: #5680e9;
+    --body-background: #84ceeb;
+    --footer-background: #5ab9ea;
+    --social-icons-background: #fff;
+    --github-background: #f00;
+    --twitter-background: #0f0;
+    --linkedin-background: #00f;
+    --github-color: #000;
+    --twitter-color: #00acee;
+    --linkedin-color: #0e76a8;
+    --quote-font-family: Shadows Into Light;
+    --quote-font-color: #fff;
+    --quote-shadow: 1px 1px 1px #000;
+    --author-font-family: Lobster;
+    --author-font-color: #f00;
+    --author-shadow: 1px 1px 1px #ff0;
+    --normal-font-color: #fff;
+    --normal-shadow: 1px 1px 1px #000;
+}
+
+*{
+    padding: 1;
+    margin: 0;
+}
+
+#container{
+    width: 99%;
+    height:99%;
+    /* transform: translate(50%, 50%); */
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#header{
+    width: 100%;
+    height: 20%;
+    background: var(--header-background);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.social-icons{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    color: var(--normal-font-color);
+    background: var(--social-icons-background);
+    font-size: 1.2em;
+}
+
+#github{
+/* background: var(--github-background); */
+color: var(--github-color);
+/* border: 2px solid #0f0; */
+}
+
+#twitter{
+    /* background: var(--twitter-background); */
+    color: var(--twitter-color);
+    /* border: 2px solid #f00; */
+}
+
+#linkedin{
+    /* background: var(--linkedin-background); */
+    color: var(--linkedin-color);
+    /* border: 2px solid #00f; */
+}
+
+.span-class{
+    padding: 10px;
+    font-size: 1em;
+    color: var(--normal-font-color);
+    text-shadow: var(--normal-shadow);
+}
+
+#body{
+    width: 100%;
+    height:70%;
+    background: var(--body-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#quote-area{
+    font-size: 5em;
+    overflow: auto;
+}
+
+#quotation{
+    font-family: var(--quote-font-family);
+    font-weight: bold;
+    color: var(--quote-font-color);
+    text-shadow: var(--quote-shadow);
+}
+
+#authored{
+    font-family: var(--author-font-family);
+    color: var(--author-font-color);
+    text-shadow: var(--author-shadow);
+}
+
+#quote-controls{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.controls{
+    font-size: 2em;
+    opacity: 0.2;
+    color: var(--normal-font-color);
+    animation-name: blip;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+#footer{
+    width: 100%;
+    height:10%;
+    background: var(--footer-background);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-class{
+    padding: 10px;
+    text-decoration: none;
+    color: var(--normal-font-color);
+    text-shadow: var(--normal-shadow);
+    font-size: 1em;
+}
+
+
+@keyframes blip {
+
+    50%{
+        opacity: 1;
+        color: white;
+    }
+}
+
+@media (min-width:280px) and (max-width:409px){
+
+    #header{
+        width: 100%;
+        height: 20%;
+        background: var(--header-background);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+    .span-class{
+        padding: 10px;
+        font-size: 1em;
+        color: var(--normal-font-color);
+        text-shadow: var(--normal-shadow);
+    }
+
+    .social-icons{
+        display: inline-block;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 50%;
+        border: 2px solid #000;
+        color: var(--normal-font-color);
+        background: var(--social-icons-background);
+        font-size: 1.2em;
+    }
+    
+
+    #quote-area{
+        font-size: 1.5em;
+        overflow: auto;
+    }
+
+}
+
+@media (min-width:410px) and (max-width:768px){
+    #quote-area{
+        font-size: 2em;
+        overflow: auto;
+    }
+
+   
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    #quote-area{
+        font-size: 3em;
+        overflow: auto;
+    }
+
+}
+
+@media (min-width:1024px) and (max-width:1200px){
+    
+    #quote-area{
+        font-size: 4em;
+        overflow: auto;
+    }
+
+    
+}

@@ -1,118 +1,52 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quote Machine</title>
+<title>Quotes</title>
 <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
-    <script src="jquery-3.2.1.min.js"></script>
-    <script src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+    <!-- <script src="bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script> -->
 </head>
 <body>
 
-<style>
+	<div id="container">
 
+		<div id="header">
+			<div id="social">
 
+					<a class="social-icons" id="twitter" href="https://twitter.com/kaushik_said" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 
-.shareButton{
-border-color:transparent;background-color:transparent;font-size:25px;color:red;
-} 
+					
+					<a class="social-icons" id="github" href="https://github.com/KaushikDev" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 
-#aboutHeading{
-font-family:Lobster;color:Silver;text-shadow:1px 1px black;
-}
+					
+					
+					<a class="social-icons" id="linkedin" href="https://www.linkedin.com/in/piyush-kaushik-61166a22/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			</div>
+			<div id="developer">
+				<span class="span-class">Coded By: Piyush Kaushik</span> 
+			</div>
+			
+		</div>
 
-.quote{
-font-weight:bold;text-shadow:1px 1px black;
-}
-
-.author{
-font-family:Lobster;color:orange;text-shadow:1px 1px black;
-}
-.card{
- background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0,0.2);
-  transition: 0.3s;
-  width: 80%;
-   border-radius: 5px;
-   margin: 10 auto;
-   float: none;
-   margin-bottom: 1px;
-  text-align:center;
-font-weight:bold;
-color:Red;
-font-family:Shadows Into Light;
-font-size: 30px;
-}
-
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0,0.5);
-}
-
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 1px;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  height:40px;
-  
-}	
-</style>
-
-<div class = "container-fluid">
-<!-------------About Section-------------------->		
-				<div class="row text-center">
-			<div class="col-xs-12">
-			<div class="card">
-              <button class="btn"><p name="aboutHeading" id="aboutHeading">Your Quote Of The Day Is !!</p></button>
-				<div style="margin: 25px 0;">
-                   <span id="quotation" class="quote" >From humble beginnings come great things.</span>    
-	 <span id="authored" class="author" >Anonymous</span>
-					</div>
-					<button id="getRealQuote" class="btn btn-info" ><i class='fa fa-lightbulb-o'></i> Get Next Quote</button>
-					<button id="setTweet" target="_blank" class="btn btn-primary" ><i class='fa fa-twitter'></i> Tweet This Quote</button>
-				</div>
+		<div id="body">
+			<div id="quote-area">
+					<span id="quotation" class="quote">From humble beginnings come great things.</span>    
+					<span id="authored" class="author">Anonymous</span>
+			</div>
+			<div id="quote-controls">
+					<a class="controls" id="setTweet" target="_blank" class="btn btn-primary"><i class='fa fa-twitter'></i></a>
+					<a class="controls" id="getRealQuote" class="btn btn-info" ><i class='fa fa-arrow-right'></i></a>
 			</div>
 		</div>
-<!-------------About Section Ends-------------------->	
 
-
-
-  <div class="row text-center"
-      		<div style="margin: 20px 0;">
-							<a id="fb" class="btn btn-default shareButton" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
-						<i class="fa fa-facebook"></i>
-					</a>
-					<a id="wa" class="btn btn-default shareButton" href="whatsapp://send?text=https://KaushikDev.github.io/randomQuotes" onClick="soundHitSocialIcon.play()">
-						<i class="fa fa-whatsapp"></i>
-					</a>
-					<a id="tw" class="btn btn-default shareButton" href="https://twitter.com/home?status=https://KaushikDev.github.io/randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
-						<i class="fa fa-twitter" ></i>
-					</a>
-					<a id="li" class="btn btn-default shareButton" href="
-		https://www.linkedin.com/shareArticle?url=https://KaushikDev.github.io/randomQuotes&title=randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
-						<i class="fa fa-linkedin" ></i>
-					</a>
-					<a id="ma" class="btn btn-default shareButton" href="mailto:?subject=randomQuotes.&amp;body=https://KaushikDev.github.io/randomQuotes" target="_blank" onClick="soundHitSocialIcon.play()">
-						<i class="fa fa-envelope-o" ></i>
-					</a>
-				</div>
-        </div>
-	<div class="row text-center" style="margin-top:10px;">
-<div class="col-xs-12">
-<a href="https://kaushikdev.github.io/portfolio/" target="_blank"><i class="fa fa-copyright" aria-hidden="true"></i>KaushikCodeArts 2018</a>
-</div>
-</div>
-	
-</div>
-
+		<div id="footer">
+				<a class="footer-class" href="https://kaushikdev.github.io/portfolio/" target="_blank">Portfolio</a>
+				<span class="footer-class">&copy;KaushikCodeArts 2019</span>
+		</div>
+	</div>
 
 <script src ="logic.js" type="text/javascript">
 
