@@ -1,5 +1,5 @@
 :root{
-    --header-background: #5680e9;
+    --header-background: #5ab9ea;
     --body-background: #84ceeb;
     --footer-background: #5ab9ea;
     --social-icons-background: #fff;
@@ -10,11 +10,11 @@
     --twitter-color: #00acee;
     --linkedin-color: #0e76a8;
     --quote-font-family: Shadows Into Light;
-    --quote-font-color: #fff;
-    --quote-shadow: 1px 1px 1px #000;
+    --quote-font-color: #f00;
+    --quote-shadow: 1px 1px 1px #ff0;
     --author-font-family: Lobster;
-    --author-font-color: #f00;
-    --author-shadow: 1px 1px 1px #ff0;
+    --author-font-color: #fff;
+    --author-shadow: 1px 1px 1px #000;
     --normal-font-color: #fff;
     --normal-shadow: 1px 1px 1px #000;
 }
