@@ -1,211 +1,191 @@
 :root{
-    --header-background: #5ab9ea;
-    --body-background: #84ceeb;
-    --footer-background: #5ab9ea;
+    --other-background: #5ab9ea;
+    --body-background: #000;
     --social-icons-background: #fff;
-    --github-background: #f00;
-    --twitter-background: #0f0;
-    --linkedin-background: #00f;
-    --github-color: #000;
-    --twitter-color: #00acee;
-    --linkedin-color: #0e76a8;
-    --quote-font-family: Shadows Into Light;
-    --quote-font-color: #f00;
-    --quote-shadow: 1px 1px 1px #ff0;
-    --author-font-family: Lobster;
-    --author-font-color: #fff;
-    --author-shadow: 1px 1px 1px #000;
+    --quote-font-family: 'Montserrat', sans-serif;
+    --quote-font-color: #fff;
+    --quote-font-size: 3em;
+    --author-font-family: 'Roboto', sans-serif;
+    --author-font-color: #87cefa;
+    --author-font-size: 2em;
+    --normal-font-family: 'Montserrat', sans-serif;
     --normal-font-color: #fff;
-    --normal-shadow: 1px 1px 1px #000;
+    --normal-font-size: 1em;
+   
 }
+
 
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
+body{
+    padding: 0;
+    margin: 0;
+    
+}
 #container{
-    width: 100%;
-    height:100%;
+    width: 100vw;
+    height:100vh;
     display: flex;
     flex-direction: column;
 }
 
 #header{
     width: 100%;
-    height: 20%;
-    background: var(--header-background);
+    height: 10vh;
+    background: var(--other-background);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
 .social-icons{
-    display: inline-block;
     margin: 10px;
     padding: 10px;
     border-radius: 50%;
-    border: 1px solid #666;
-    color: var(--normal-font-color);
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    color: #000;
     background: var(--social-icons-background);
-    font-size: 1.2em;
+    font-size: var(--normal-font-size)
 }
 
-#github{
-color: var(--github-color);
-}
-
-#twitter{
-      color: var(--twitter-color);
-  }
-
-#linkedin{
-    color: var(--linkedin-color);
-}
-
-.span-class{
-    padding: 10px;
-    font-size: 1em;
+#developer > a{
     color: var(--normal-font-color);
-    text-shadow: var(--normal-shadow);
+    font-family: var(--normal-font-family);
 }
 
 #body{
     width: 100%;
-    height:70%;
+    height:80vh;
     background: var(--body-background);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
 #quote-area{
-    font-size: 5em;
+    margin: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 90%;
     overflow: auto;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #quotation{
     font-family: var(--quote-font-family);
+    font-size: var(--quote-font-size);
     font-weight: bold;
     color: var(--quote-font-color);
-    text-shadow: var(--quote-shadow);
+   
 }
 
 #authored{
     font-family: var(--author-font-family);
+    font-size: var(--author-font-size);
     color: var(--author-font-color);
-    text-shadow: var(--author-shadow);
+  
 }
 
 #quote-controls{
     width: 100%;
+    height: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.controls{
-    padding: 10px;
-    font-size: 2em;
-    opacity: 0.2;
+#quote-controls > a{
+    text-decoration: none;
     color: var(--normal-font-color);
-    animation-name: blip;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+    font-size: 2em;
 }
 
 
 #footer{
     width: 100%;
-    height:10%;
-    background: var(--footer-background);
+    height:10vh;
+    background: var(--other-background);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.footer-class{
-    padding: 10px;
-    text-decoration: none;
+#footer > p{
+
     color: var(--normal-font-color);
-    text-shadow: var(--normal-shadow);
-    font-size: 1em;
+    font-size: var(--normal-font-size);
+    font-family: var(--normal-font-family);
 }
 
 
-@keyframes blip {
 
-    50%{
-        opacity: 1;
-        color: white;
+
+@media (min-width:300px) and (max-width:728px){
+
+ 
+    .social-icons{
+        margin: 5px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+        color: #000;
+        background: var(--social-icons-background);
+        font-size: var(--normal-font-size)
     }
-}
 
-@media (min-width:280px) and (max-width:409px){
-
-    #header{
-        width: 100%;
-        height: 20%;
-        background: var(--header-background);
+    
+    #quote-area{
+        margin: 0;
+        padding: 5px;
+        width: 98%;
+        height: 90%;
+        overflow: scroll;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
-      }
-
-    .span-class{
-        padding: 10px;
-        font-size: 1em;
-        color: var(--normal-font-color);
-        text-shadow: var(--normal-shadow);
-    }
-
-    .social-icons{
-        display: inline-block;
-        margin: 10px;
-        padding: 10px;
-        border-radius: 50%;
-        border: 1px solid #666;
-        color: var(--normal-font-color);
-        background: var(--social-icons-background);
-        font-size: 1.2em;
     }
     
-
-    #quote-area{
-        font-size: 1.5em;
-        overflow: auto;
-    }
-
-}
-
-@media (min-width:410px) and (max-width:768px){
-    #quote-area{
+    #quotation{
+        font-family: var(--quote-font-family);
         font-size: 2em;
-        overflow: auto;
+        color: var(--quote-font-color);
+       
     }
-
-   
-}
-
-@media (min-width:768px) and (max-width:1024px){
-    #quote-area{
-        font-size: 3em;
-        overflow: auto;
-    }
-
-}
-
-@media (min-width:1024px) and (max-width:1200px){
     
-    #quote-area{
-        font-size: 4em;
-        overflow: auto;
+    #authored{
+        font-family: var(--author-font-family);
+        font-size: 1em;
+        color: var(--author-font-color);
+      
     }
-
+    
+    #quote-controls{
+        width: 90%;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #quote-controls > a{
+        text-decoration: none;
+        color: var(--normal-font-color);
+        font-size: 1.5em;
+    }
+    
 }
+
+
