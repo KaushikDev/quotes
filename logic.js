@@ -2,28 +2,28 @@
 	
 $(document).ready(function(){
 
-	
-
-	
 //this is where the code for random hard coded quotes is gonna go
+$("#show-prev-quote").on("click", function() {
+       $("#quote").html(localStorage.getItem('quote'));
+      $("#author").html(localStorage.getItem('author'));
+      $("#show-prev-quote").prop("disabled", true);
+      $("#show-prev-quote").addClass("disabled");
+   });
 
-$("#getRealQuote").on("click", function() {
-   realQuotes();
-   
+$("#show-next-quote").on("click", function() {
+   quotes();
+   $("#show-prev-quote").prop("disabled", false);
+   $("#show-prev-quote").removeClass("disabled");
    });
  
-$("#setTweet").on("click", function() {
-   tweetIt();
+$("#post-on-twitter").on("click", function() {
+   tweet();
    
    });
 
- $("#getQuote").on("click", function(){
-myQuotes();
-});
-  
    
-function realQuotes(){
-	var realquotes=[["Don't cry because it's over, smile because it happened.", "Dr. Seuss"],
+function quotes(){
+	var quoteArr=[["Don't cry because it's over, smile because it happened.", "Dr. Seuss"],
 ["I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best", "Marilyn Monroe"], 
 ["Be yourself; everyone else is already taken.","Oscar Wilde"], 
 ["Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", "Albert Einstein"],
@@ -90,27 +90,23 @@ function realQuotes(){
  ["It is far better to be alone, than to be in bad company.","George Washington"],
  ["Whenever I climb I am followed by a dog called ‘Ego’.","Friedrich Nietzsche"]];	
  
+localStorage.setItem("quote", $("#quote").text());
+localStorage.setItem("author", $("#author").text());
  
- 
-var randRealQuote = Math.floor(Math.random()*realquotes.length);
-$(".quote").html(realquotes[randRealQuote][0]);
-$(".author").html(realquotes[randRealQuote][1]);
+var randomQuote = Math.floor(Math.random()*quoteArr.length);
+$("#quote").html(quoteArr[randomQuote][0]);
+$("#author").html(quoteArr[randomQuote][1]);
+
 }
           
-function tweetIt () {
- var currentQuote=document.getElementById("quotation").innerText;
-var currentAuthor=document.getElementById("authored").innerText;
-var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent(' " ' + currentQuote + ' " ' + currentAuthor);
+function tweet () {
+ var currentQuote=document.getElementById("quote").innerText;
+var currentAuthor=document.getElementById("author").innerText;
+var tweetUrl = 'https://twitter.com/intent/tweet?hashtags=QuoteOfTheDay&text=' + encodeURIComponent('"' + currentQuote + '" - ' + currentAuthor);
 window.open(tweetUrl, "_blank");
 }
 	
 	
-function postIt () {
- var currentQuote=document.getElementById("quotation").innerText;
-var currentAuthor=document.getElementById("authored").innerText;
-var tweetUrl = "https://www.facebook.com/sharer/sharer.php?u=";
-
-	window.open(tweetUrl, "_blank");
-	}	  
+  
 		  
 });  
