@@ -1,10 +1,16 @@
 $(document).ready(function() {
   //this is where the code for random hard coded quotes is gonna go
+  var currentQuote;
+  var currentAuthor;
+  var toBePosted;
+
   $("#show-prev-quote").on("click", function() {
     $("#quote").html(localStorage.getItem("quote"));
     $("#author").html(localStorage.getItem("author"));
     $("#show-prev-quote").prop("disabled", true);
     $("#show-prev-quote").addClass("disabled");
+    currentQuote = $("#quote").text();
+    currentAuthor = $("#author").text();
   });
 
   $("#show-next-quote").on("click", function() {
@@ -251,11 +257,11 @@ $(document).ready(function() {
     var randomQuote = Math.floor(Math.random() * quoteArr.length);
     $("#quote").html(quoteArr[randomQuote][0]);
     $("#author").html(quoteArr[randomQuote][1]);
+      currentQuote = $("#quote").text();
+      currentAuthor = $("#author").text();
   }
 
-  var currentQuote = document.getElementById("quote").innerText;
-  var currentAuthor = document.getElementById("author").innerText;
-  var toBePosted;
+
   $("#post-on-twitter").on("click", function() {
    
     toBePosted =
