@@ -1,10 +1,15 @@
 $(document).ready(function() {
   //this is where the code for random hard coded quotes is gonna go
-  var currentQuote;
-  var currentAuthor;
-  var toBePosted;
+  let currentQuote;
+  let currentAuthor;
+  let toBePosted;
 
-  $("#show-prev-quote").on("click", function() {
+  // let showPrev = document.querySelector("#show-prev-quote");
+  // let showNext = document.querySelector("#show-next-quote");
+
+  // document.addEventListener("keydown", navQuotes, false );
+
+    $("#show-prev-quote").on("click", function() {
     $("#quote").html(localStorage.getItem("quote"));
     $("#author").html(localStorage.getItem("author"));
     $("#show-prev-quote").prop("disabled", true);
@@ -18,6 +23,8 @@ $(document).ready(function() {
     $("#show-prev-quote").prop("disabled", false);
     $("#show-prev-quote").removeClass("disabled");
   });
+
+
 
   function quotes() {
     var quoteArr = [
@@ -286,3 +293,20 @@ $(document).ready(function() {
    window.open(toBePosted, "_blank");  
 });
 });
+
+
+// const navQuotes = (e) => {
+//   if(e.keycode === 37){
+//     $("#quote").html(localStorage.getItem("quote"));
+//     $("#author").html(localStorage.getItem("author"));
+//     $("#show-prev-quote").prop("disabled", true);
+//     $("#show-prev-quote").addClass("disabled");
+//     currentQuote = $("#quote").text();
+//     currentAuthor = $("#author").text();
+//   }  
+//   else if(e.keycode === 39){
+//     quotes();
+//     $("#show-prev-quote").prop("disabled", false);
+//     $("#show-prev-quote").removeClass("disabled");
+//   }
+// };
