@@ -1,0 +1,448 @@
+
+
+:root{
+    --other-background: #1976D2;
+    --body-background: #000;
+    --social-icons-background: #fff;
+    --quote-font-family: 'Montserrat', sans-serif;
+    --quote-font-color: #fff;
+    --quote-font-size: 3em;
+    --author-font-family: 'Roboto', sans-serif;
+    --author-font-color: #87cefa;
+    --author-font-size: 2em;
+    --normal-font-family: 'Roboto', sans-serif;
+    --normal-font-color: #fff;
+    --normal-font-size: 1em;
+   
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+#container{
+    width: 100vw;
+    height:100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+#header{
+    width: 100%;
+    height: 10vh;
+    background: var(--other-background);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+.social-icons{
+    margin: 10px;
+    color: var(--normal-font-color);
+    font-size: 1em;
+    }
+
+#developer > a{
+    color: var(--normal-font-color);
+    font-family: var(--normal-font-family);
+}
+
+#quote-body{
+    width: 100%;
+    height:90vh;
+    background: var(--body-background);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    
+}
+
+#quote-area{
+    margin: 1em;
+    padding: 1em;
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#quote{
+    font-family: var(--quote-font-family);
+    font-size: var(--quote-font-size);
+    font-weight: bold;
+    color: var(--quote-font-color);
+   
+}
+
+#author{
+    font-family: var(--author-font-family);
+    font-size: var(--author-font-size);
+    color: var(--author-font-color);
+  
+}
+
+#quote-controls{
+    width: 100%;
+    height: 10%;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#quote-controls > a{
+    background: none;
+    border: none;
+    color: var(--normal-font-color);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#quote-controls > .disabled{
+    color: #999;
+    cursor: none;
+
+}
+
+
+#quote-share{
+    background: #2196F3;
+    width: 100%;
+    height: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-clip-path: circle(2.5% at 50% 50%);
+            clip-path: circle(2.5% at 50% 50%);
+    -webkit-transition: -webkit-clip-path 0.5s ease-in-out;
+    transition: -webkit-clip-path 0.5s ease-in-out;
+    -o-transition: clip-path 0.5s ease-in-out;
+    transition: clip-path 0.5s ease-in-out;
+    transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+}
+
+#quote-share:hover{
+    -webkit-clip-path: circle(80% at 50% 50%);
+            clip-path: circle(80% at 50% 50%);
+    background: #1976D2;
+    background: #2196F3;
+}
+
+
+#quote-share > a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--normal-font-color);
+    font-size: 1em;
+}
+
+
+
+
+#footer{
+    width: 100%;
+    height:10vh;
+    background: var(--other-background);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+#footer > p{
+
+    color: var(--normal-font-color);
+    font-size: var(--normal-font-size);
+    font-family: var(--normal-font-family);
+}
+
+
+
+
+@media (min-width:300px) and (max-width:728px){
+
+    #header{
+        width: 100%;
+        height: 10vh;
+        background: var(--other-background);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+      }
+    
+    .social-icons{
+        margin: 10px;
+        color: var(--normal-font-color);
+        font-size: 1em;
+        }
+    
+    #developer > a{
+        color: var(--normal-font-color);
+        font-family: var(--normal-font-family);
+    }
+    
+    #quote-body{
+        width: 100%;
+        height:90vh;
+        background: var(--body-background);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        
+    }
+    
+    #quote-area{
+        margin: 1em;
+        padding: 1em;
+        width: 100%;
+        height: 80%;
+        overflow: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    
+    #quote{
+        font-family: var(--quote-font-family);
+        font-size: 2em;
+        color: var(--quote-font-color);
+       
+    }
+    
+    #author{
+        font-family: var(--author-font-family);
+        font-size: 1em;
+        color: var(--author-font-color);
+      
+    }
+    
+    #quote-controls{
+        width: 100%;
+        height: 10%;
+        padding: 1em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    
+    #quote-controls > a{
+        background: none;
+        border: none;
+        color: var(--normal-font-color);
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    
+    #quote-controls > .disabled{
+        color: #999;
+        cursor: none;
+    
+    }
+    
+    
+    #quote-share{
+        background: #2196F3;
+        width: 100%;
+        height: 10%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-clip-path: circle(9% at 50% 50%);
+                clip-path: circle(9% at 50% 50%);
+        -webkit-transition: -webkit-clip-path 0.5s ease-in-out;
+        transition: -webkit-clip-path 0.5s ease-in-out;
+        -o-transition: clip-path 0.5s ease-in-out;
+        transition: clip-path 0.5s ease-in-out;
+        transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+    }
+    
+    #quote-share:hover{
+        -webkit-clip-path: circle(80% at 50% 50%);
+                clip-path: circle(80% at 50% 50%);
+        background: #1976D2;
+    }
+    
+    
+    #quote-share > a{
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--normal-font-color);
+        font-size: 1em;
+    }
+    
+    
+    
+    
+    #footer{
+        width: 100%;
+        height:10vh;
+        background: var(--other-background);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+    #footer > p{
+    
+        color: var(--normal-font-color);
+        font-size: var(--normal-font-size);
+        font-family: var(--normal-font-family);
+    }
+}
+
+
+@media (min-width:729px) and (max-width:1200px){
+    #quote-share{
+        background: #2196F3;
+        width: 100%;
+        height: 10%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-clip-path: circle(5% at 50% 50%);
+                clip-path: circle(5% at 50% 50%);
+        -webkit-transition: -webkit-clip-path 0.5s ease-in-out;
+        transition: -webkit-clip-path 0.5s ease-in-out;
+        -o-transition: clip-path 0.5s ease-in-out;
+        transition: clip-path 0.5s ease-in-out;
+        transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
+    }
+}
